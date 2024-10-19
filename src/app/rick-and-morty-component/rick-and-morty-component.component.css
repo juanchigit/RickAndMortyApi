@@ -1,0 +1,119 @@
+* {
+  font-family: cursive;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000000;
+}
+
+.header {
+  font-size: 22px;
+  background-color: #ff0000;
+  color: #131210;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.botones-paginacion {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.botones-paginacion button {
+  margin: 0 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+.botones-paginacion button:hover {
+  background-color: #ff0000;
+}
+
+.ubicacion-carta {
+  border: 3px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px;
+  background-color: rgb(255, 255, 255);
+  width: calc(20% - 20px);
+  text-align: center;
+}
+
+.contenedor-busqueda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.contenedor-busqueda input {
+  font-size: 25px;
+  text-align: center;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.contenedor-busqueda input::placeholder {
+  font-size: 18px;
+}
+
+.contenedor-busqueda button {
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+.contenedor-personajes,
+.contenedor-ubicaciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.carta {
+  border: 3px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 15px;
+  background-color: rgb(255, 255, 255);
+  width: calc(20% - 20px);
+  text-align: center;
+}
+
+.carta img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  color: #000000;
+  background-color: #ff0000;
+  padding: 5px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 400px) {
+  .carta, .ubicacion-carta {
+    width: calc(100% - 20px);
+  }
+}

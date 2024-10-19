@@ -1,0 +1,62 @@
+<body>
+  <header class="header">
+    <div class="contenedor-titulo">
+      <h1>Rick and Morty</h1>
+    </div>
+  </header>
+
+  <nav class="navegacion">
+    <div class="botones-paginacion">
+      <button (click)="volverInicio()">Inicio</button>
+
+      <div *ngIf="tipoVista === 'personajes'">
+        <button (click)="anterior('personajes')" *ngIf="prevPageCharacters">Anterior</button>
+        <button (click)="siguiente('personajes')" *ngIf="nextPageCharacters">Siguiente</button>
+        <button (click)="obtenerUbicaciones()">Ubicaciones</button>
+      </div>
+
+      <div *ngIf="tipoVista === 'ubicaciones'">
+        <button (click)="anterior('ubicaciones')" *ngIf="prevPageLocations">Anterior</button>
+        <button (click)="siguiente('ubicaciones')" *ngIf="nextPageLocations">Siguiente</button>
+      </div>
+    </div>
+
+    <div class="contenedor-busqueda">
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm" 
+        placeholder="Buscar personaje..." 
+        class="search-input"
+      />
+      <button (click)="seleccionarPersonaje(searchTerm)">Buscar</button>
+    </div>
+  </nav>
+
+  <main class="contenedor">
+    <div *ngIf="!mostrarUbicaciones">
+      <div class="contenedor-personajes">
+        <div *ngFor="let personaje of listaPersonajes" class="carta">
+          <img [src]="personaje.image" alt="{{ personaje.name }}" />
+          <h3>{{ personaje.name }}</h3>
+          <p>Estado: {{ personaje.status }}</p>
+          <p>Especie: {{ personaje.species }}</p>
+          <p>Género: {{ personaje.gender }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="mostrarUbicaciones">
+      <div class="contenedor-ubicaciones">
+        <div *ngFor="let ubicacion of listaUbicaciones" class="ubicacion-carta">
+          <h3>{{ ubicacion.name }}</h3>
+          <p>Tipo: {{ ubicacion.type }}</p>
+          <p>Dimensión: {{ ubicacion.dimension }}</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>por Juan I. Tuite</p>
+  </footer>
+</body>
