@@ -1,27 +1,51 @@
-# RickAndMortyApi
+# RickAndMortyAPI
+Este proyecto fue generado con Angular CLI versión 17.3.8.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Descripción del Proyecto
+Esta API permite obtener información sobre los personajes y las ubicaciones de la serie llamada **Rick and Morty**. Es ideal para desarrolladores que deseen integrar datos de la serie en sus aplicaciones.
 
-## Development server
+## Requisitos previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de ejecutar el proyecto, asegúrate de instalar los siguientes paquetes:
 
-## Code scaffolding
+1. `@angular-devkit/build-angular` (para construir la aplicación):
+   ```bash
+   npm install @angular-devkit/build-angular --save-dev
+   ```
+   
+2. Instala las dependencias del proyecto:
+   ```bash
+   npm install
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Instala Angular CLI globalmente (si aún no lo tienes):
+   ```bash
+   npm install -g @angular/cli
+   ```
 
-## Build
+## Servidor de desarrollo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta `ng serve` para iniciar el servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambias alguno de los archivos fuente.
 
-## Running unit tests
+## Generación de código
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta `ng generate component nombre-del-componente` para generar un nuevo componente. También puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Running end-to-end tests
+## Construcción
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ejecuta `ng build` para construir el proyecto. Los artefactos de construcción se almacenarán en el directorio `dist/`.
 
-## Further help
+## Ejecución de pruebas unitarias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ejecuta `ng test` para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io).
+
+## Ejecución de pruebas end-to-end
+
+Ejecuta `ng e2e` para ejecutar las pruebas end-to-end a través de una plataforma de tu elección. Para usar este comando, primero debes agregar un paquete que implemente capacidades de pruebas end-to-end.
+
+## Ayuda adicional
+
+Para obtener más ayuda sobre Angular CLI, utiliza `ng help` o consulta la [Descripción general de Angular CLI y referencia de comandos](https://angular.io/cli).
+
+## Licencia
+Este proyecto está bajo una licencia libre, lo que permite su uso y modificación.
